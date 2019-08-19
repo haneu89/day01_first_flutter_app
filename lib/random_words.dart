@@ -14,7 +14,14 @@ class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
     final WordPair wordPair = WordPair.random();
-    return _buildSuggestions();
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+        ),
+        body: Center(
+          child: _buildSuggestions(),
+        ),
+      );
   }
 
   Widget _buildSuggestions() {
